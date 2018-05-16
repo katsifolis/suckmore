@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "ProFont-15";
+static char font[] = "Hack-15";
 static int borderpx = 0;
 #define histsize 2000
 
@@ -157,7 +157,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
