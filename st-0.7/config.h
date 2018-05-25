@@ -5,7 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Hack-15";
+
+//static char font[] = "-misc-fixed-medium-r-normal--13-120-75-75-c-70-iso8859-1";
+static char font[] = "Hack-16";
 static int borderpx = 0;
 #define histsize 2000
 
@@ -50,7 +52,7 @@ static unsigned int actionfps = 30;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout =10; 
 
 /*
  * thickness of underline and bar cursors
@@ -129,7 +131,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static unsigned int cursorshape = 2;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -173,6 +175,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask,		XK_Page_Up,	kscrollup,	{.i = -1} },
+	{ ShiftMask,		XK_Page_Down,	kscrolldown,	{.i = -1} },
 };
 
 /*

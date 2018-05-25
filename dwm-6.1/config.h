@@ -2,9 +2,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"ProFont-16"
+	"Hack-16"
 };
-static const char dmenufont[]       = "ProFont-16";
+static const char dmenufont[]       = "Hack-16";
 static const unsigned int gappx = 6; /* gap pixel between windows */
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
@@ -18,7 +18,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "I", "II", "III", "IV", "V", "VI"};
 
 static const Rule rules[] = {
 	/* xprop(1):
