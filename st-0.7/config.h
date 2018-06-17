@@ -7,7 +7,7 @@
  */
 
 //static char font[] = "-misc-fixed-medium-r-normal--13-120-75-75-c-70-iso8859-1";
-static char font[] = "Hack-16";
+static char font[] = "Hack-15";
 static int borderpx = 0;
 #define histsize 2000
 
