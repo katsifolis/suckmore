@@ -1,0 +1,14 @@
+# For the Time passed (Steps)
+OPTION=time 
+OPTION=color 
+# Why not
+OPTION=dogname:luffy
+# Why notter
+OPTION=catname:nami
+OPTION=!autopickup
+# For the death screen
+OPTION=disclose:yi -a +#g -g -c -o
+# Supposedly for menu colors but hasn't been incorporated in 3.6.1
+OPTION=menucolors
+# How many xp points until lvlup
+OPTION=showexp
