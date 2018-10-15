@@ -133,7 +133,7 @@ enum term_mode {
 	MODE_MOUSESGR    = 1 << 12,
 	MODE_8BIT        = 1 << 13,
 	MODE_BLINK       = 1 << 14,
-	MODE_FBLINK      = 1 << 15,
+	MODE_CURSORBLINK = 1 << 15,
 	MODE_FOCUS       = 1 << 16,
 	MODE_MOUSEX10    = 1 << 17,
 	MODE_MOUSEMANY   = 1 << 18,
@@ -387,6 +387,7 @@ static void strparse(void);
 static void strreset(void);
 
 static int tattrset(int);
+static int cursorset(int);
 static void tprinter(char *, size_t);
 static void tdumpsel(void);
 static void tdumpline(int);
@@ -1591,6 +1592,25 @@ ttyresize(void)
 	w.ws_ypixel = xw.th;
 	if (ioctl(cmdfd, TIOCSWINSZ, &w) < 0)
 		fprintf(stderr, "Couldn't set window size: %s\n", strerror(errno));
+}
+
+/*
+ * cursorset()
+ *	Check for cursor attr
+ */
+int
+cursorset(int attr)
+{
+	/* For now, only ATTR_BLINK is considered */
+	switch (xw.cursor) {
+	case 0: /* Blinking Block */
+	case 1: /* Blinking Block (Default) */
+	case 3: /* Blinking Underline */
+	case 5: /* Blinking bar */
+		return(1);
+	default:
+		return(0);
+	}
 }
 
 int
@@ -3942,6 +3962,12 @@ xdrawcursor(void)
 
 	if (IS_SET(MODE_HIDE))
 		return;
+	if (cursorset(ATTR_BLINK)) {
+		if ((term.mode & MODE_CURSORBLINK) == 0) {
+			/* Every other time, leave unpainted */
+			return;
+		}
+	}
 
 	/* draw the new one */
 	if (xw.state & WIN_FOCUSED) {
@@ -3963,6 +3989,7 @@ xdrawcursor(void)
 					xw.cw, cursorthickness);
 			break;
 		case 5: /* Blinking bar */
+			if (IS_SET(MODE_BLINK)) break;
 		case 6: /* Steady bar */
 			XftDrawRect(xw.draw, &drawcol,
 					borderpx + curx * xw.cw,
@@ -4290,7 +4317,6 @@ run(void)
 	int xfd = XConnectionNumber(xw.dpy), xev, blinkset = 0, dodraw = 0;
 	struct timespec drawtimeout, *tv = NULL, now, last, lastblink;
 	long deltatime;
-
 	/* Waiting for window mapping */
 	do {
 		XNextEvent(xw.dpy, &ev);
@@ -4328,8 +4354,10 @@ run(void)
 			ttyread();
 			if (blinktimeout) {
 				blinkset = tattrset(ATTR_BLINK);
-				if (!blinkset)
+				if (!blinkset) {
 					MODBIT(term.mode, 0, MODE_BLINK);
+				}
+				blinkset |= cursorset(ATTR_BLINK);
 			}
 		}
 
@@ -4344,7 +4372,7 @@ run(void)
 		dodraw = 0;
 		if (blinktimeout && TIMEDIFF(now, lastblink) > blinktimeout) {
 			tsetdirtattr(ATTR_BLINK);
-			term.mode ^= MODE_BLINK;
+			term.mode ^= (MODE_BLINK | MODE_CURSORBLINK);
 			lastblink = now;
 			dodraw = 1;
 		}
