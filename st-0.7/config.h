@@ -5,7 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Hack-13";
+//static char font[] = "Hack-13";
+static char font[] = "GohuGohuFont-14";
+//static char font[] = "xos4Terminus-14";
 static int borderpx = 0;
 #define histsize 1000
 
