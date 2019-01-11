@@ -5,8 +5,14 @@ export DEVKITPPC=${DEVKITPRO}/devkitPPC
 export PATH=$PATH:/home/helios/scripts
 #export EMAIL=theironbil@gmail.com
 
-export PATH=${DEVKITPRO}/tools/bin:$PATH
+export NNN_USE_EDITOR=1
+export GOPATH=${GOPATH}:/home/helios/go/sshtron
 
+
+export PATH=${DEVKITPRO}/tools/bin:$PATH
+export EDITOR=vim
+
+alias p="python"
 alias lsc="ls -la | lolcat"
 alias ls="ls --color"
 alias up="sudo pacman -Syu"
@@ -21,10 +27,11 @@ alias gcloud="ssh -i ~/.ssh/id_rsa helios@35.198.65.110"
 #alias padon="xinput set-prop 11 'Device Enabled' 1"
 #alias padoff="xinput set-prop 11 'Device Enabled' 0"
 
-PS1="->"
+PS1=$'\u03bb '
 #(cat ~/.cache/wal/sequences &)
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
-
+#if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+#  exec startx
+#fi
 
 # Bored already
 # fortune | cowsay | lolcat -a -s 1000 
