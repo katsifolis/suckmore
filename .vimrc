@@ -1,19 +1,12 @@
 " Simple stuff
 syntax on
+color dracula
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set number relativenumber
 set noautoindent
 set backspace=2
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'pangloss/vim-javascript'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'posva/vim-vue'
-
-call plug#end()
 
 " Recursively search for files in directors with the :find command
 set path+=**

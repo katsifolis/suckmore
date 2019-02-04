@@ -6,13 +6,15 @@ export PATH=$PATH:/home/helios/scripts
 #export EMAIL=theironbil@gmail.com
 
 export NNN_USE_EDITOR=1
-export GOPATH=${GOPATH}:/home/helios/go/sshtron
+export GOPATH=/home/helios/go/
 
 
 export PATH=${DEVKITPRO}/tools/bin:$PATH
 export EDITOR=vim
 
 alias p="python"
+alias stc="vim ${HOME}/suckmore/st-0.7/config.h"
+alias stm="cd ${HOME}/suckmore/st-0.7/ && sudo make install"
 alias lsc="ls -la | lolcat"
 alias ls="ls --color"
 alias up="sudo pacman -Syu"
@@ -28,6 +30,7 @@ alias gcloud="ssh -i ~/.ssh/id_rsa helios@35.198.65.110"
 #alias padoff="xinput set-prop 11 'Device Enabled' 0"
 
 PS1=$'\u03bb '
+transset-df -a 0.95 1> /dev/null
 #(cat ~/.cache/wal/sequences &)
 #if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 #  exec startx
