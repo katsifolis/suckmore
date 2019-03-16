@@ -4,18 +4,18 @@
 
 // THIS IS FOR DWM //
 static const char *fonts[] = {
-	"Hack-16"
+	"Hack-14"
 };
-static const char dmenufont[]       = "Hack-16";
-static const unsigned int gappx = 2; /* gap pixel between windows */
+static const char dmenufont[]       = "Hack-14";
+static const unsigned int gappx = 4; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
-static const char normbgcolor[]     = "#303030";
+static const char normbgcolor[]     = "#44146f";
 static const char normfgcolor[]     = "#000000";
-static const char selbordercolor[]  = "#88ffcc";
-static const char selbgcolor[]      = "#68ffcc";
+static const char selbordercolor[]  = "#551a8b";
+static const char selbgcolor[]      = "#2a0d45";
 static const char selfgcolor[]      = "#000000";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int snap      = 4;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
@@ -33,7 +33,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.35; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
