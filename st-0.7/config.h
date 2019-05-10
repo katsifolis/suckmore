@@ -5,14 +5,19 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char font[] = "Hack-11";
-//static char font[] = "Inconsolata-13";
+static char font[] = "Hack-11";
+//static char font[] = "Inconsolata-11";
 //static char font[] = "GohuGohuFont-14";
-//static char font[] = "MiscTamsyn-11";
-//static char font[] = "curie-12";
-static char font[] = "xos4Terminus-11";
+//static char font[] = "Unifont-12";
+//static char font[] = "Misc Tamsyn:bold-11";
+//static char font[] = "curie:bold-10";
+//static char font[] = "scientifica:bold-10";
+//static char font[] = "ProggyClean-10";
+//static char font[] = "Triforce-11";
+//static char font[] = "Fixedsys Excelsior-12";
+//static char font[] = "xos4Terminus-11";
 static int borderpx = 10;
-#define histsize 1000
+#define histsize 100000
 
 /*
  * What program is execed by st depends of these precedence rules:
