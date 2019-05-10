@@ -1,7 +1,7 @@
 " Simple stuff
 syntax on
-color dracula
-filetype plugin indent on
+"color meadow
+set enc=utf-8
 set tabstop=4
 set shiftwidth=4
 set number relativenumber
