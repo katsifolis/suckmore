@@ -4,10 +4,10 @@
 
 // THIS IS FOR DWM //
 static const char *fonts[] = {
-	"Hack-13"
+	"Hack-10"
 };
-static const char dmenufont[]       = "Hack-10";
-static const unsigned int gappx = 4; /* gap pixel between windows */
+static const char dmenufont[]      = "Hack-10";
+static const unsigned int gappx = 10; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 static const char normbgcolor[]     = "#9c4e16";
 static const char normfgcolor[]     = "#000000";
@@ -15,12 +15,12 @@ static const char selbordercolor[]  = "#9c4e16";
 static const char selbgcolor[]      = "#e27e36";
 static const char selfgcolor[]      = "#000000";
 
-static unsigned int baralpha        = 0x40;
+static unsigned int baralpha        = 0x10;
 static unsigned int borderalpha     = OPAQUE;
 
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
-static const unsigned int snap      = 1;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const unsigned int snap      = 0;       /* snap pixel */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */

@@ -1,6 +1,7 @@
 # For the Time passed (Steps)
 OPTION=time 
 OPTION=color 
+OPTION=!rest_on_space
 # Why not
 OPTION=dogname:luffy
 # Why notter
