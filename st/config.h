@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
 //static char *font = "ProggySquareTT:pixelsize=13:antialias=true:autohint=true";
-static char *font = "xos4 Terminus:pixelsize=11:antialias=true:autohint=true";
+//static char *font = "xos4 Terminus Bold:pixelsize=11:antialias=true:autohint=true";
 //static char *font = "curie-10:antialias=true:autohint=true";
 static int borderpx = 6;
 

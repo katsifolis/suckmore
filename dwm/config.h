@@ -7,7 +7,7 @@ static const char *fonts[] = {
 	"Hack-10"
 };
 static const char dmenufont[]      = "Hack-10";
-static const unsigned int gappx = 10; /* gap pixel between windows */
+static const unsigned int gappx = 5; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 static const char normbgcolor[]     = "#9c4e16";
 static const char normfgcolor[]     = "#000000";
