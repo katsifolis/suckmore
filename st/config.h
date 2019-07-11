@@ -9,6 +9,7 @@ static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
 //static char *font = "ProggySquareTT:pixelsize=13:antialias=true:autohint=true";
 //static char *font = "xos4 Terminus Bold:pixelsize=11:antialias=true:autohint=true";
 //static char *font = "curie-10:antialias=true:autohint=true";
+//static char *font = "scientifica-12:antialias=true:autohint=true";
 static int borderpx = 6;
 
 /*
