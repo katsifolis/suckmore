@@ -18,7 +18,7 @@ static const char selfgcolor[]      = "#000000";
 static unsigned int baralpha        = 0x10;
 static unsigned int borderalpha     = OPAQUE;
 
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 6;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */

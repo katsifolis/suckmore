@@ -5,11 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
+//static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
+//static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
+//static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 //static char *font = "ProggySquareTT:pixelsize=13:antialias=true:autohint=true";
-//static char *font = "xos4 Terminus Bold:pixelsize=11:antialias=true:autohint=true";
+//static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold";
 //static char *font = "curie-10:antialias=true:autohint=true";
-//static char *font = "scientifica-12:antialias=true:autohint=true";
+static char *font = "scientifica-10:antialias=false:autohint=false";
 static int borderpx = 6;
 
 /*
@@ -91,46 +93,52 @@ float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"black",   /* 256 -> bg */
-	"white",   /* 257 -> fg */
-	"#add8e6", /* 258 -> cursor */
-};
 
+  /* 8 normal colors */
+  [0] = "#090c08", /* black   */
+  [1] = "#141813", /* red     */
+  [2] = "#242a22", /* green   */
+  [3] = "#3b4338", /* yellow  */
+  [4] = "#576353", /* blue    */
+  [5] = "#798a74", /* magenta */
+  [6] = "#a2b79b", /* cyan    */
+  [7] = "#d0eac7", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#ce86de", /* black   */
+  [9]  = "#56a8e0", /* red     */
+  [10] = "#61a33e", /* green   */
+  [11] = "#669c4d", /* yellow  */
+  [12] = "#bb5ecd", /* blue    */
+  [13] = "#d486e5", /* magenta */
+  [14] = "#bd9f6b", /* cyan    */
+  [15] = "#6eafe1", /* white   */
+
+  /* special colors */
+  [256] = "#050604", /* background */
+  [257] = "#c8e1c0", /* foreground */
+};
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 15;
-static unsigned int defaultrcs = 0;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+unsigned int defaultcs = 257;
+unsigned int defaultrcs = 1;
 
 /*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
  */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
+
+
+
 static unsigned int cursorshape = 2;
 
 /*
