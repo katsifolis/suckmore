@@ -9,9 +9,9 @@
 //static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 //static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 //static char *font = "ProggySquareTT:pixelsize=13:antialias=true:autohint=true";
-//static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold";
+static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Normal";
 //static char *font = "curie-10:antialias=true:autohint=true";
-static char *font = "scientifica-10:antialias=false:autohint=false";
+//static char *font = "scientifica-8:antialias=false:autohint=false";
 static int borderpx = 6;
 
 /*
@@ -89,35 +89,38 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.96;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-  /* 8 normal colors */
-  [0] = "#090c08", /* black   */
-  [1] = "#141813", /* red     */
-  [2] = "#242a22", /* green   */
-  [3] = "#3b4338", /* yellow  */
-  [4] = "#576353", /* blue    */
-  [5] = "#798a74", /* magenta */
-  [6] = "#a2b79b", /* cyan    */
-  [7] = "#d0eac7", /* white   */
+	/* 8 normal colors */
+	[0] = "#000000", /* black   */
+	[1] = "#e92f2f", /* red     */
+	[2] = "#0ed839", /* green   */
+	[3] = "#dddd13", /* yellow  */
+	[4] = "#3b48e3", /* blue    */
+	[5] = "#f996e2", /* magenta */
+	[6] = "#23edda", /* cyan    */
+	[7] = "#ababab", /* white   */
 
-  /* 8 bright colors */
-  [8]  = "#ce86de", /* black   */
-  [9]  = "#56a8e0", /* red     */
-  [10] = "#61a33e", /* green   */
-  [11] = "#669c4d", /* yellow  */
-  [12] = "#bb5ecd", /* blue    */
-  [13] = "#d486e5", /* magenta */
-  [14] = "#bd9f6b", /* cyan    */
-  [15] = "#6eafe1", /* white   */
+	/* 8 bright colors */
+	[8]  = "#343434", /* black   */
+	[9]  = "#e92f2f", /* red     */
+	[10] = "#0ed839", /* green   */
+	[11] = "#dddd13", /* yellow  */
+	[12] = "#3b48e3", /* blue    */
+	[13] = "#f996e2", /* magenta */
+	[14] = "#23edda", /* cyan    */
+	[15] = "#f9f9f9", /* white   */
 
-  /* special colors */
-  [256] = "#050604", /* background */
-  [257] = "#c8e1c0", /* foreground */
+	/* special colors */
+	[256] = "#000000", /* background */
+	[257] = "#ababab", /* foreground */
 };
+
+
+
 
 /*
  * Default colors (colorname index)
@@ -133,8 +136,8 @@ unsigned int defaultrcs = 1;
  * will reverse too. Another logic would only make the simple feature too
  * complex.
  */
-static unsigned int defaultitalic = 7;
-static unsigned int defaultunderline = 7;
+unsigned int defaultitalic = 7;
+unsigned int defaultunderline = 7;
 
 
 
