@@ -7,7 +7,7 @@ static const char *fonts[] = {
 	"Hack-10"
 };
 static const char dmenufont[]      = "Hack-10";
-static const unsigned int gappx = 5; /* gap pixel between windows */
+static const unsigned int gappx = 3; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 static const char normbgcolor[]     = "#325279";
 static const char normfgcolor[]     = "#000000";
@@ -20,7 +20,7 @@ static unsigned int borderalpha     = OPAQUE;
 
 static const unsigned int borderpx  = 6;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
