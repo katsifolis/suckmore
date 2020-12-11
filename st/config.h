@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
 //static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 //static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 //static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
-static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold";
+//static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold";
 //static char *font = "curie-10:antialias=true:autohint=true";
 //static char *font = "scientifica-8:antialias=false:autohint=false";
 static int borderpx = 6;
