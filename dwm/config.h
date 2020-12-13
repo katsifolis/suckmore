@@ -9,10 +9,11 @@ static const char *fonts[] = {
 static const char dmenufont[]      = "Hack-10";
 static const unsigned int gappx = 3; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
-static const char normbgcolor[]     = "#325279";
+//static const char normbgcolor[]     = "#325279"; //blue active
+static const char normbgcolor[]     = "#222222"; 
 static const char normfgcolor[]     = "#000000";
-static const char selbordercolor[]  = "#325279";
-static const char selbgcolor[]      = "#0E1A33";
+static const char selbordercolor[]  = "#4d4d4d"; // lighter
+static const char selbgcolor[]      = "#333333"; // darker
 static const char selfgcolor[]      = "#000000";
 
 static unsigned int baralpha        = 0x10;
