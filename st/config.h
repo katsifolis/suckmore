@@ -5,14 +5,16 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono:pixelsize=13:antialias=true:autohint=true";
-//static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
-//static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
-//static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
-//static char *font = "xos4 Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold";
-//static char *font = "curie-10:antialias=true:autohint=true";
-//static char *font = "scientifica-8:antialias=false:autohint=false";
-static int borderpx = 6;
+// static char *font = "Ubuntu Mono:pixelsize=16:antialias=true:autohint=true:style=Normal";
+// static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
+// static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
+// static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
+// static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
+static char *font = "Terminus:pixelsize=16:antialias=true:autohint=true:style=Normal";
+// static char *font = "Misc Fixed:pixelsize=16:antialias=false:style=Normal";
+// static char *font = "curie:pixelsize=12:antialias=true:autohint=true:style=Normal";
+// static char *font = "scientifica:pixelsize=11:antialias=false:autohint=true:style=Normal";
+static int borderpx = 8;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -87,62 +89,49 @@ char *termname = "st-256color";
  *	stty tabs
  */
 unsigned int tabspaces = 8;
-
-/* bg opacity */
-float alpha = 0.75;
-
-/* Terminal colors (16 first used in escape sequence) */
+// /* bg opacity */
+float alpha = 0.80;
 static const char *colorname[] = {
-
 	/* 8 normal colors */
-	[0] = "#000000", /* black   */
-	[1] = "#e92f2f", /* red     */
-	[2] = "#0ed839", /* green   */
-	[3] = "#dddd13", /* yellow  */
-	[4] = "#3b48e3", /* blue    */
-	[5] = "#f996e2", /* magenta */
-	[6] = "#23edda", /* cyan    */
-	[7] = "#ababab", /* white   */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
 	/* 8 bright colors */
-	[8]  = "#343434", /* black   */
-	[9]  = "#e92f2f", /* red     */
-	[10] = "#0ed839", /* green   */
-	[11] = "#dddd13", /* yellow  */
-	[12] = "#3b48e3", /* blue    */
-	[13] = "#f996e2", /* magenta */
-	[14] = "#23edda", /* cyan    */
-	[15] = "#f9f9f9", /* white   */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
-	/* special colors */
-	[256] = "#000000", /* background */
-	[257] = "#ababab", /* foreground */
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc",
+	"#eeeeee",
+	"#111111",
 };
 
-
-
-
 /*
- * Default colors (colorname index)
- * foreground, background, cursor
- */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
+* Default colors (colorname index)
+* foreground, background, cursor
+*/
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 7;
 unsigned int defaultrcs = 1;
+unsigned int defaultitalic = 8;
+unsigned int defaultunderline = 8;
 
-/*
- * Colors used, when the specific fg == defaultfg. So in reverse mode this
- * will reverse too. Another logic would only make the simple feature too
- * complex.
- */
-unsigned int defaultitalic = 7;
-unsigned int defaultunderline = 7;
-
-
-
-
-static unsigned int cursorshape = 2;
+unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers

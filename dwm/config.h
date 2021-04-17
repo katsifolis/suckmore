@@ -7,25 +7,26 @@ static const char *fonts[] = {
 	"Hack-10"
 };
 static const char dmenufont[]      = "Hack-10";
-static const unsigned int gappx = 3; /* gap pixel between windows */
+static const unsigned int gappx = 0; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 //static const char normbgcolor[]     = "#325279"; //blue active
 static const char normbgcolor[]     = "#222222"; 
-static const char normfgcolor[]     = "#000000";
-static const char selbordercolor[]  = "#4d4d4d"; // lighter
-static const char selbgcolor[]      = "#333333"; // darker
-static const char selfgcolor[]      = "#000000";
+static const char normfgcolor[]     = "#ffffff";
+static const char selbordercolor[]  = "#9003fc"; // lighter
+static const char selbgcolor[]      = "#000000"; // darker
+static const char selfgcolor[]      = "#ffffff";
 
 static unsigned int baralpha        = 0x10;
 static unsigned int borderalpha     = OPAQUE;
 
-static const unsigned int borderpx  = 6;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "I", "II", "III", "IV", "V", "VI"};
+static const char *tags[] = { "1", "2", "3", "4"};
+//static const char *tags[] = { "", "II", "III", "🎷", "♞ " , "VI"};
 
 static const Rule rules[] = {
 	/* xprop(1):
