@@ -1,0 +1,6 @@
+feeds() {
+	feed "CNN stories" "http://rss.cnn.com/rss/cnn_topstories.rss"
+	feed "NY times"    "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+	feed "hn"          "https://news.ycombinator.com/rss"
+	feed "notrelated"  "https://notrelated.libsyn.com/rss"
+}

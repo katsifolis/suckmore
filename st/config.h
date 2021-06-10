@@ -5,14 +5,15 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-// static char *font = "Ubuntu Mono:pixelsize=16:antialias=true:autohint=true:style=Normal";
+// static char *font = "Ubuntu Mono:pixelsize=16:antialias=true:autohint=false:style=Normal";
 // static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
 // static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 // static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 // static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
-static char *font = "Terminus:pixelsize=16:antialias=true:autohint=true:style=Normal";
-// static char *font = "Misc Fixed:pixelsize=16:antialias=false:style=Normal";
-// static char *font = "curie:pixelsize=12:antialias=true:autohint=true:style=Normal";
+static char *font = "Terminus:pixelsize=20:antialias=false:autohint=true:style=Normal";
+// static char *font = "TerminessTTF Nerd Font:pixelsize=16:antialias=false:autohint=true:style=Normal";
+// static char *font = "Misc Fixed:pixelsize=13:antialias=true:style=Normal";
+// static char *font = "curie:pixelsize=12:antialias=false:autohint=true:style=Normal";
 // static char *font = "scientifica:pixelsize=11:antialias=false:autohint=true:style=Normal";
 static int borderpx = 8;
 
@@ -32,8 +33,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
+static float cwscale = 0.3;
+static float chscale = 0.3;
 
 /*
  * word delimiter string

@@ -4,22 +4,23 @@
 
 // THIS IS FOR DWM //
 static const char *fonts[] = {
-	"Hack-10"
+	"xos4 Terminus"
 };
-static const char dmenufont[]      = "Hack-10";
-static const unsigned int gappx = 0; /* gap pixel between windows */
+
+static const char dmenufont[]      = "xos4 Terminus";
+static const unsigned int gappx = 4; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 //static const char normbgcolor[]     = "#325279"; //blue active
 static const char normbgcolor[]     = "#222222"; 
 static const char normfgcolor[]     = "#ffffff";
-static const char selbordercolor[]  = "#9003fc"; // lighter
+static const char selbordercolor[]  = "#333399"; //"#9003fc"; // lighter
 static const char selbgcolor[]      = "#000000"; // darker
 static const char selfgcolor[]      = "#ffffff";
 
-static unsigned int baralpha        = 0x10;
+static unsigned int baralpha        = 0xff;
 static unsigned int borderalpha     = OPAQUE;
 
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -65,7 +66,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 //static const char *termcmd[]  = { "st", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[]  = { "chromium", NULL }; /* Spawn a broswer */
 
 static Key keys[] = {
