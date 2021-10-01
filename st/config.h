@@ -6,11 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "Ubuntu Mono:pixelsize=16:antialias=true:autohint=false:style=Normal";
-// static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
+static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
 // static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 // static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 // static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
-static char *font = "Terminus:pixelsize=20:antialias=false:autohint=true:style=Normal";
+// static char *font = "Terminus:pixelsize=12:antialias=false:autohint=true:style=Normal";
 // static char *font = "TerminessTTF Nerd Font:pixelsize=16:antialias=false:autohint=true:style=Normal";
 // static char *font = "Misc Fixed:pixelsize=13:antialias=true:style=Normal";
 // static char *font = "curie:pixelsize=12:antialias=false:autohint=true:style=Normal";
@@ -33,8 +33,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.3;
-static float chscale = 0.3;
+static float cwscale = 1.0;
+static float chscale = 1.0;
 
 /*
  * word delimiter string
@@ -48,7 +48,7 @@ static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
-int allowaltscreen = 1;
+int allowaltscreen = 0;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -132,7 +132,7 @@ unsigned int defaultrcs = 1;
 unsigned int defaultitalic = 8;
 unsigned int defaultunderline = 8;
 
-unsigned int cursorshape = 4;
+unsigned int cursorshape = 1;
 
 /*
  * Default columns and rows numbers

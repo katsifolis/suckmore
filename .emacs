@@ -36,7 +36,7 @@
 (split-window-horizontally)
 (electric-pair-mode t)
 ;; Rust
-(setq rust-format-on-save t)
+;;(setq rust-format-on-save t)
 (add-hook 'rust-mode-hook
           (lambda () (setq indent-tabs-mode nil)))
 (setq racer-rust-src-path
@@ -49,12 +49,12 @@
 
 ;; May be intensive in cpu
 ;; Racer and company mode
-(add-hook 'after-init-hook 'global-company-mode)
-(use-package racer
-  :requires rust-mode
-  :config
-  (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode))
+;;(add-hook 'after-init-hook 'global-company-mode)
+;;(use-package racer
+;;  :requires rust-mode
+;;  :config
+;;  (add-hook 'rust-mode-hook #'racer-mode)
+;;  (add-hook 'racer-mode-hook #'eldoc-mode))
 
 ;; The evilest of the evils conf
 (setq evil-want-C-u-scroll t)
