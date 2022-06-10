@@ -6,11 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "Ubuntu Mono:pixelsize=16:antialias=true:autohint=false:style=Normal";
-// static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
+static char *font = "Hack:pixelsize=16:antialias=true:autohint=true:style=Normal";
 // static char *font = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 // static char *font = "NotoSansMono:pixelsize=16:antialias=true:autohint=true";
 // static char *font = "ProggySquared:pixelsize=13:antialias=true:autohint=true";
-static char *font = "Terminus:pixelsize=20:antialias=false:autohint=true:style=Normal";
+// static char *font = "Terminus:pixelsize=20:antialias=false:autohint=true:style=Normal";
 // static char *font = "TerminessTTF Nerd Font:pixelsize=16:antialias=false:autohint=true:style=Normal";
 // static char *font = "Misc Fixed:pixelsize=13:antialias=true:style=Normal";
 // static char *font = "curie:pixelsize=12:antialias=false:autohint=true:style=Normal";
@@ -91,7 +91,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 // /* bg opacity */
-float alpha = 0.80;
+float alpha = 0.65;
 static const char *colorname[] = {
 	/* 8 normal colors */
 	"black",

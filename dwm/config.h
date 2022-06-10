@@ -4,11 +4,11 @@
 
 // THIS IS FOR DWM //
 static const char *fonts[] = {
-	"Terminus-6"
+	"Terminus"
 };
 
 
-static const char dmenufont[]      = "Terminus-6";
+static const char dmenufont[]      = "Terminus";
 static const unsigned int gappx = 4; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 //static const char normbgcolor[]     = "#325279"; //blue active
@@ -21,7 +21,7 @@ static const char selfgcolor[]      = "#ffffff";
 static unsigned int baralpha        = 0xff;
 static unsigned int borderalpha     = OPAQUE;
 
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
