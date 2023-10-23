@@ -1,3 +1,4 @@
+# Something to do with java and guis and dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # use UTF-8 everywhere
@@ -38,6 +39,15 @@ xidle -ne -delay 1 -timeout 7200 -program /usr/xlock -mode random &
 
 # Status Bar
 slstatus &
+
+# Disabling core dump files
+ulimit -Sc 0
+
+# Picom
+picom --backend glx --vsync &
+
+# Wallpaper
+feh --bg-center ~/Downloads/zelda.jpg
 
 # DWM
 exec dwm

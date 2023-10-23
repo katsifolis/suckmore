@@ -4,11 +4,11 @@
 
 // THIS IS FOR DWM //
 static const char *fonts[] = {
-	"Terminus"
+	"Terminus-9"
 };
 
 
-static const char dmenufont[]      = "Terminus";
+static const char dmenufont[]      = "Terminus-9";
 static const unsigned int gappx = 4; /* gap pixel between windows */
 static const char normbordercolor[] = "#202020";
 //static const char normbgcolor[]     = "#325279"; //blue active

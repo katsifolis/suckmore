@@ -5,9 +5,9 @@ set showmatch
 " display row/column info
 set ruler
 " autoindent width = 2 spaces
-set shiftwidth=4
+set shiftwidth=2
 " tab width = 2 spaces
-set tabstop=4
+set tabstop=2
 " display all error messages
 set verbose
 " enable horizontal scrolling
